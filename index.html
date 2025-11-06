@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jimmaa Coffee - Lease Proposal</title>
+    <title>Jimmaa Coffee - Celebrating the Birthplace of Coffee</title>
     <style>
         /* Global Styles */
         * {
@@ -105,6 +105,41 @@
             font-style: italic;
         }
         
+        /* Navigation */
+        nav {
+            background-color: var(--dark);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
         /* About Section */
         .about {
             background-color: white;
@@ -133,57 +168,112 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        /* Space Plan Section */
-        .space-plan {
+        /* Menu Section */
+        .menu {
             background-color: var(--light);
         }
         
-        .plan-details {
+        .menu-items {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
-        .plan-card {
+        .menu-category {
             background-color: white;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
         }
         
-        .plan-card:hover {
-            transform: translateY(-5px);
+        .menu-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--accent);
         }
         
-        .plan-card h3 {
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-header {
             display: flex;
-            align-items: center;
-            margin-bottom: 15px;
+            justify-content: space-between;
+            margin-bottom: 5px;
         }
         
-        .plan-card h3 i {
-            margin-right: 10px;
-            color: var(--accent);
+        .item-name {
+            font-weight: bold;
         }
         
-        /* Offer Section */
-        .offer {
+        .item-price {
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .item-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Location Section */
+        .location {
             background-color: white;
         }
         
-        .offer-content {
+        .location-content {
             display: flex;
             flex-wrap: wrap;
             gap: 40px;
         }
         
-        .offer-details {
+        .location-info {
             flex: 1;
             min-width: 300px;
         }
         
-        .offer-contact {
+        .location-hours {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        .hours-table {
+            width: 100%;
+        }
+        
+        .hours-table tr {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .hours-table td {
+            padding: 10px 0;
+        }
+        
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light);
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-details {
             flex: 1;
             min-width: 300px;
             background-color: var(--dark);
@@ -192,12 +282,8 @@
             border-radius: 8px;
         }
         
-        .offer-contact h3 {
+        .contact-details h3 {
             color: var(--light);
-        }
-        
-        .contact-info {
-            margin-top: 20px;
         }
         
         .contact-item {
@@ -217,6 +303,21 @@
             color: var(--text-light);
             text-align: center;
             padding: 30px 0;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
         }
         
         /* Responsive Design */
@@ -240,93 +341,210 @@
             section {
                 padding: 40px 0;
             }
+            
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .nav-links li {
+                margin: 0 15px;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">JIMMAA COFFEE</div>
+            <ul class="nav-links">
+                <li><a href="#about">Our Heritage</a></li>
+                <li><a href="#menu">Our Offerings</a></li>
+                <li><a href="#location">Find Us</a></li>
+                <li><a href="#contact">Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Header Section -->
     <header>
         <div class="container">
             <div class="logo">JIMMAA COFFEE</div>
-            <div class="tagline">SINCE JIMMA - THE ORIGIN OF COFFEE</div>
-            <h1>LEASE PROPOSAL FOR RETAIL SPACE AT PINEY CREEK CROSSING</h1>
+            <div class="tagline">Celebrating the Birthplace of Coffee</div>
+            <h1>Experience the Authentic Taste from Coffee's Homeland</h1>
+            <a href="#menu" class="btn" style="margin-top: 20px;">Discover Our Offerings</a>
         </div>
     </header>
 
     <!-- About Section -->
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
-            <h2>BUSINESS OVERVIEW & VISION</h2>
+            <h2>OUR ROOTS</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Jimmaa Coffee will be a cultural coffee shop serving the local community and nearby workers. Our shop will provide a warm, welcoming environment with high-quality coffee and a unique Ethiopian-inspired atmosphere.</p>
-                    <p>Drawing inspiration from the birthplace of coffee in Jimma, Ethiopia, we aim to create an authentic experience that celebrates coffee's rich history while providing a modern, comfortable space for our customers.</p>
-                    <p>Our vision extends beyond just serving coffee - we want to create a community hub where people can connect, work, and experience the cultural heritage of coffee's origin.</p>
+                    <p>Jimmaa Coffee brings the authentic flavors and traditions of Ethiopian coffee culture to your community. Named in honor of Jimma, the legendary birthplace of coffee in Ethiopia's highlands, we celebrate the ancient art of coffee preparation while creating a contemporary gathering space.</p>
+                    <p>Our premium beans journey directly from Ethiopian highland farms, guaranteeing exceptional quality while supporting sustainable agricultural traditions. Every cup embodies a legacy of heritage and skilled artistry.</p>
+                    <p>Jimmaa Coffee represents more than a destination for exceptional beverages - we're a community crossroads where connections form, creativity flows, and the true spirit of coffee culture comes alive.</p>
                 </div>
                 <div class="about-image"></div>
             </div>
         </div>
     </section>
 
-    <!-- Space Plan Section -->
-    <section class="space-plan">
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
         <div class="container">
-            <h2>SPACE & OPERATIONS PLAN</h2>
-            <div class="plan-details">
-                <div class="plan-card">
-                    <h3><i class="fas fa-ruler-combined"></i> Space Utilization</h3>
-                    <p>Jimmaa Coffee will occupy the available 600 sq. ft. retail space, featuring a coffee bar, seating area, and display shelves. The layout is designed for efficient operations and an inviting customer experience.</p>
+            <h2>OUR CRAFTED SELECTIONS</h2>
+            <div class="menu-items">
+                <div class="menu-category">
+                    <h3>Coffee & Espresso Creations</h3>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Traditional Ethiopian Brew</span>
+                            <span class="item-price">$4.50</span>
+                        </div>
+                        <p class="item-desc">Authentic coffee prepared in the traditional Ethiopian ceremony style</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Jimmaa Heritage Blend</span>
+                            <span class="item-price">$5.00</span>
+                        </div>
+                        <p class="item-desc">Our signature creation with distinctive berry and chocolate notes</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Single-Origin Espresso</span>
+                            <span class="item-price">$3.50</span>
+                        </div>
+                        <p class="item-desc">Bold and complex espresso from Ethiopian highlands</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Artisan Cappuccino</span>
+                            <span class="item-price">$4.75</span>
+                        </div>
+                        <p class="item-desc">Expertly crafted with velvety microfoam</p>
+                    </div>
                 </div>
-                <div class="plan-card">
-                    <h3><i class="fas fa-coffee"></i> Coffee Bar & Service</h3>
-                    <p>Our coffee bar will be the centerpiece, featuring state-of-the-art equipment for brewing traditional Ethiopian coffee alongside modern espresso beverages.</p>
+                
+                <div class="menu-category">
+                    <h3>Teas & Specialty Drinks</h3>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Ethiopian Spiced Tea</span>
+                            <span class="item-price">$4.25</span>
+                        </div>
+                        <p class="item-desc">Traditional tea infused with authentic Ethiopian spices</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Artisan Hot Chocolate</span>
+                            <span class="item-price">$4.50</span>
+                        </div>
+                        <p class="item-desc">Rich, indulgent chocolate experience</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Ethiopian Cold Brew</span>
+                            <span class="item-price">$4.75</span>
+                        </div>
+                        <p class="item-desc">Smooth cold-brewed Ethiopian coffee served over ice</p>
+                    </div>
                 </div>
-                <div class="plan-card">
-                    <h3><i class="fas fa-users"></i> Seating & Atmosphere</h3>
-                    <p>The seating area will accommodate approximately 20-25 guests with a mix of individual tables, communal seating, and comfortable lounge areas.</p>
-                </div>
-                <div class="plan-card">
-                    <h3><i class="fas fa-store"></i> Retail Display</h3>
-                    <p>Display shelves will showcase Ethiopian coffee beans, traditional coffee brewing equipment, and related merchandise for customers to purchase.</p>
+                
+                <div class="menu-category">
+                    <h3>Artisan Baked Goods</h3>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Injera Crisps</span>
+                            <span class="item-price">$5.50</span>
+                        </div>
+                        <p class="item-desc">Crispy traditional bread with signature dipping sauces</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Butter Croissant</span>
+                            <span class="item-price">$3.75</span>
+                        </div>
+                        <p class="item-desc">Flaky, buttery pastry baked fresh daily</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <span class="item-name">Featured Muffin</span>
+                            <span class="item-price">$3.50</span>
+                        </div>
+                        <p class="item-desc">Ask about our daily muffin creation</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Offer Section -->
-    <section class="offer">
+    <!-- Location Section -->
+    <section id="location" class="location">
         <div class="container">
-            <h2>OFFER TO LANDLORD</h2>
-            <div class="offer-content">
-                <div class="offer-details">
-                    <h3>Lease Terms</h3>
-                    <p>Jimmaa Coffee offers a lease term of 5+ years, demonstrating our long-term commitment to the Piney Creek Crossing location and the surrounding community.</p>
-                    
-                    <h3>Operations Timeline</h3>
-                    <p>We are prepared to commence operations within 45 days of lease signing, with minimal build-out requirements due to our efficient space planning.</p>
-                    
-                    <h3>Community Impact</h3>
-                    <p>Jimmaa Coffee will enhance the retail mix at Piney Creek Crossing by offering a unique cultural experience that will attract customers throughout the day and create a destination within the shopping center.</p>
+            <h2>OUR SPACE</h2>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Welcome to Our Home</h3>
+                    <p>Step into the warm, inviting atmosphere of Jimmaa Coffee. Our environment reflects Ethiopian cultural elements while providing contemporary comfort for work, conversation, or quiet reflection with your perfect beverage.</p>
+                    <p>We offer comfortable seating arrangements, complimentary WiFi, and a tranquil setting ideal for meetings or personal relaxation.</p>
+                    <p><strong>Find Us At:</strong> Piney Creek Crossing Retail Center</p>
                 </div>
-                <div class="offer-contact">
-                    <h3>CONTACT INFORMATION</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>703-479-8732</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>cotete11899@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-globe"></i>
-                            <span>jimmaacoffee.com</span>
-                        </div>
+                <div class="location-hours">
+                    <h3>Operating Hours</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td>Monday - Friday</td>
+                            <td>6:00 AM - 9:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>7:00 AM - 10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>7:00 AM - 8:00 PM</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>STAY CONNECTED</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Reach Out to Us</h3>
+                    <p>Curious about our coffee origins, interested in hosting an event, or simply want to share your experience? We welcome your connection!</p>
+                    <p>We continuously strive to enhance our service and community presence. Your insights and suggestions are valued.</p>
+                    <p>Follow our social channels for updates on special events, new creations, and coffee tasting experiences.</p>
+                </div>
+                <div class="contact-details">
+                    <h3>GET IN TOUCH</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>703-479-8732</span>
                     </div>
-                    <p style="margin-top: 20px;">We look forward to discussing this opportunity further and demonstrating how Jimmaa Coffee will be a valuable addition to Piney Creek Crossing.</p>
-                    <a href="mailto:cotete11899@gmail.com" class="btn" style="margin-top: 20px;">Contact Us Today</a>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>cotete11899@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Piney Creek Crossing Retail Center</span>
+                    </div>
+                    <p style="margin-top: 20px;">We eagerly anticipate serving you an exceptional coffee experience!</p>
+                    <a href="mailto:cotete11899@gmail.com" class="btn" style="margin-top: 20px;">Send Us a Message</a>
                 </div>
             </div>
         </div>
@@ -335,7 +553,13 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>Jimmaa Coffee - Celebrating the Origin of Coffee Since Jimma</p>
+            <div class="logo">JIMMAA COFFEE</div>
+            <p>Celebrating the Birthplace of Coffee</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
             <p>&copy; 2023 Jimmaa Coffee. All rights reserved.</p>
         </div>
     </footer>
