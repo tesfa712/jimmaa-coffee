@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmaa Coffee - Lease Proposal</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #8B4513; /* Coffee brown */
+            --secondary: #D2691E; /* Chocolate brown */
+            --accent: #CD853F; /* Peru brown */
+            --light: #F5F5DC; /* Beige */
+            --dark: #3E2723; /* Dark brown */
+            --text: #333333;
+            --text-light: #FFFFFF;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3 {
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Space Plan Section */
+        .space-plan {
+            background-color: var(--light);
+        }
+        
+        .plan-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .plan-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .plan-card h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .plan-card h3 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        /* Offer Section */
+        .offer {
+            background-color: white;
+        }
+        
+        .offer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .offer-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .offer-contact {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--dark);
+            color: var(--text-light);
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        .offer-contact h3 {
+            color: var(--light);
+        }
+        
+        .contact-info {
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            header {
+                padding: 60px 0;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">JIMMAA COFFEE</div>
+            <div class="tagline">SINCE JIMMA - THE ORIGIN OF COFFEE</div>
+            <h1>LEASE PROPOSAL FOR RETAIL SPACE AT PINEY CREEK CROSSING</h1>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>BUSINESS OVERVIEW & VISION</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Jimmaa Coffee will be a cultural coffee shop serving the local community and nearby workers. Our shop will provide a warm, welcoming environment with high-quality coffee and a unique Ethiopian-inspired atmosphere.</p>
+                    <p>Drawing inspiration from the birthplace of coffee in Jimma, Ethiopia, we aim to create an authentic experience that celebrates coffee's rich history while providing a modern, comfortable space for our customers.</p>
+                    <p>Our vision extends beyond just serving coffee - we want to create a community hub where people can connect, work, and experience the cultural heritage of coffee's origin.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Space Plan Section -->
+    <section class="space-plan">
+        <div class="container">
+            <h2>SPACE & OPERATIONS PLAN</h2>
+            <div class="plan-details">
+                <div class="plan-card">
+                    <h3><i class="fas fa-ruler-combined"></i> Space Utilization</h3>
+                    <p>Jimmaa Coffee will occupy the available 600 sq. ft. retail space, featuring a coffee bar, seating area, and display shelves. The layout is designed for efficient operations and an inviting customer experience.</p>
+                </div>
+                <div class="plan-card">
+                    <h3><i class="fas fa-coffee"></i> Coffee Bar & Service</h3>
+                    <p>Our coffee bar will be the centerpiece, featuring state-of-the-art equipment for brewing traditional Ethiopian coffee alongside modern espresso beverages.</p>
+                </div>
+                <div class="plan-card">
+                    <h3><i class="fas fa-users"></i> Seating & Atmosphere</h3>
+                    <p>The seating area will accommodate approximately 20-25 guests with a mix of individual tables, communal seating, and comfortable lounge areas.</p>
+                </div>
+                <div class="plan-card">
+                    <h3><i class="fas fa-store"></i> Retail Display</h3>
+                    <p>Display shelves will showcase Ethiopian coffee beans, traditional coffee brewing equipment, and related merchandise for customers to purchase.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="offer">
+        <div class="container">
+            <h2>OFFER TO LANDLORD</h2>
+            <div class="offer-content">
+                <div class="offer-details">
+                    <h3>Lease Terms</h3>
+                    <p>Jimmaa Coffee offers a lease term of 5+ years, demonstrating our long-term commitment to the Piney Creek Crossing location and the surrounding community.</p>
+                    
+                    <h3>Operations Timeline</h3>
+                    <p>We are prepared to commence operations within 45 days of lease signing, with minimal build-out requirements due to our efficient space planning.</p>
+                    
+                    <h3>Community Impact</h3>
+                    <p>Jimmaa Coffee will enhance the retail mix at Piney Creek Crossing by offering a unique cultural experience that will attract customers throughout the day and create a destination within the shopping center.</p>
+                </div>
+                <div class="offer-contact">
+                    <h3>CONTACT INFORMATION</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>703-479-8732</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>cotete11899@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <span>jimmaacoffee.com</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px;">We look forward to discussing this opportunity further and demonstrating how Jimmaa Coffee will be a valuable addition to Piney Creek Crossing.</p>
+                    <a href="mailto:cotete11899@gmail.com" class="btn" style="margin-top: 20px;">Contact Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Jimmaa Coffee - Celebrating the Origin of Coffee Since Jimma</p>
+            <p>&copy; 2023 Jimmaa Coffee. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
