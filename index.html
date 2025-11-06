@@ -105,7 +105,7 @@
             font-style: italic;
         }
         
-        /* Navigation */
+        /* Navigation - Fixed for Mobile */
         nav {
             background-color: var(--dark);
             padding: 15px 0;
@@ -118,6 +118,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-light);
         }
         
         .nav-links {
@@ -138,6 +144,21 @@
         
         .nav-links a:hover {
             color: var(--accent);
+        }
+        
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background: var(--text-light);
+            margin: 3px 0;
+            transition: 0.3s;
         }
         
         /* About Section */
@@ -320,7 +341,7 @@
             color: var(--accent);
         }
         
-        /* Responsive Design */
+        /* Responsive Design - Fixed Mobile Menu */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -342,16 +363,54 @@
                 padding: 40px 0;
             }
             
-            .nav-container {
-                flex-direction: column;
+            /* Mobile Navigation */
+            .menu-toggle {
+                display: flex;
             }
             
             .nav-links {
-                margin-top: 15px;
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--dark);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
             }
             
             .nav-links li {
-                margin: 0 15px;
+                margin: 20px 0;
+            }
+            
+            .nav-links a {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-logo {
+                font-size: 1.2rem;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            header {
+                padding: 40px 0;
             }
         }
     </style>
@@ -361,8 +420,13 @@
     <!-- Navigation -->
     <nav>
         <div class="container nav-container">
-            <div class="logo">JIMMAA COFFEE</div>
-            <ul class="nav-links">
+            <div class="nav-logo">JIMMAA COFFEE</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">Our Heritage</a></li>
                 <li><a href="#menu">Our Offerings</a></li>
                 <li><a href="#location">Find Us</a></li>
@@ -563,5 +627,22 @@
             <p>&copy; 2023 Jimmaa Coffee. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
