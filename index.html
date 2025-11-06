@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jimmaa Coffee - Celebrating the Birthplace of Coffee</title>
+    <title>Jimmaa Coffee - Since Jimma, The Origin of Coffee</title>
     <style>
         /* Global Styles */
         * {
@@ -14,12 +14,12 @@
         }
         
         :root {
-            --primary: #A67B5B; /* Lighter coffee brown */
-            --secondary: #C19A6B; /* Warm golden brown */
-            --accent: #D4B896; /* Soft beige */
-            --light: #F8F5F0; /* Warm off-white */
-            --dark: #5D4037; /* Rich chocolate brown */
-            --text: #4E342E; /* Dark brown text */
+            --primary: #8B4513; /* Coffee brown */
+            --secondary: #D2691E; /* Chocolate brown */
+            --accent: #CD853F; /* Peru brown */
+            --light: #F5F5DC; /* Beige */
+            --dark: #3E2723; /* Dark brown */
+            --text: #333333;
             --text-light: #FFFFFF;
         }
         
@@ -47,8 +47,6 @@
         h1 {
             font-size: 2.5rem;
             text-align: center;
-            color: #F8F5F0; /* Updated to light color for better contrast */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         h2 {
@@ -76,19 +74,17 @@
             border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
-            transition: all 0.3s;
+            transition: background-color 0.3s;
             cursor: pointer;
         }
         
         .btn:hover {
             background-color: var(--secondary);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
-        /* Header Styles - Updated with Lighter Colors */
+        /* Header Styles */
         header {
-            background: linear-gradient(rgba(166, 123, 91, 0.85), rgba(193, 154, 107, 0.8)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: var(--text-light);
@@ -100,36 +96,28 @@
             font-size: 3.5rem;
             font-weight: bold;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .tagline {
             font-size: 1.5rem;
             margin-bottom: 30px;
             font-style: italic;
-            color: var(--light);
         }
         
-        /* Navigation - Updated Colors */
+        /* Navigation */
         nav {
-            background-color: var(--primary);
+            background-color: var(--dark);
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--text-light);
         }
         
         .nav-links {
@@ -146,29 +134,10 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
-            padding: 5px 10px;
-            border-radius: 4px;
         }
         
         .nav-links a:hover {
-            color: var(--light);
-            background-color: rgba(255,255,255,0.1);
-        }
-        
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        
-        .menu-toggle span {
-            height: 3px;
-            width: 25px;
-            background: var(--text-light);
-            margin: 3px 0;
-            transition: 0.3s;
-            border-radius: 2px;
+            color: var(--accent);
         }
         
         /* About Section */
@@ -215,11 +184,6 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        
-        .menu-category:hover {
-            transform: translateY(-5px);
         }
         
         .menu-item {
@@ -240,7 +204,6 @@
         
         .item-name {
             font-weight: bold;
-            color: var(--dark);
         }
         
         .item-price {
@@ -275,7 +238,6 @@
             background-color: var(--light);
             padding: 30px;
             border-radius: 8px;
-            border-left: 4px solid var(--primary);
         }
         
         .hours-table {
@@ -293,7 +255,6 @@
         .hours-table td:last-child {
             text-align: right;
             font-weight: bold;
-            color: var(--primary);
         }
         
         /* Contact Section */
@@ -315,11 +276,10 @@
         .contact-details {
             flex: 1;
             min-width: 300px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background-color: var(--dark);
             color: var(--text-light);
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .contact-details h3 {
@@ -339,7 +299,7 @@
         
         /* Footer */
         footer {
-            background: linear-gradient(135deg, var(--dark), #4E342E);
+            background-color: var(--dark);
             color: var(--text-light);
             text-align: center;
             padding: 30px 0;
@@ -360,7 +320,7 @@
             color: var(--accent);
         }
         
-        /* Responsive Design - Fixed Mobile Menu */
+        /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -382,54 +342,16 @@
                 padding: 40px 0;
             }
             
-            /* Mobile Navigation */
-            .menu-toggle {
-                display: flex;
+            .nav-container {
+                flex-direction: column;
             }
             
             .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background-color: var(--primary);
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                padding-top: 50px;
-                transition: left 0.3s ease;
-            }
-            
-            .nav-links.active {
-                left: 0;
+                margin-top: 15px;
             }
             
             .nav-links li {
-                margin: 20px 0;
-            }
-            
-            .nav-links a {
-                font-size: 1.2rem;
-                padding: 10px 20px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .nav-logo {
-                font-size: 1.2rem;
-            }
-            
-            .logo {
-                font-size: 2rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-            
-            header {
-                padding: 40px 0;
+                margin: 0 15px;
             }
         }
     </style>
@@ -439,17 +361,12 @@
     <!-- Navigation -->
     <nav>
         <div class="container nav-container">
-            <div class="nav-logo">JIMMAA COFFEE</div>
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">Our Heritage</a></li>
-                <li><a href="#menu">Our Offerings</a></li>
-                <li><a href="#location">Find Us</a></li>
-                <li><a href="#contact">Connect</a></li>
+            <div class="logo">JIMMAA COFFEE</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -458,21 +375,21 @@
     <header>
         <div class="container">
             <div class="logo">JIMMAA COFFEE</div>
-            <div class="tagline">Celebrating the Birthplace of Coffee</div>
-            <h1>Experience the Authentic Taste from Coffee's Homeland</h1>
-            <a href="#menu" class="btn" style="margin-top: 20px;">Discover Our Offerings</a>
+            <div class="tagline">SINCE JIMMA - THE ORIGIN OF COFFEE</div>
+            <h1>Experience Authentic Ethiopian Coffee Culture</h1>
+            <a href="#menu" class="btn" style="margin-top: 20px;">View Our Menu</a>
         </div>
     </header>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>OUR ROOTS</h2>
+            <h2>OUR STORY</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Jimmaa Coffee brings the authentic flavors and traditions of Ethiopian coffee culture to your community. Named in honor of Jimma, the legendary birthplace of coffee in Ethiopia's highlands, we celebrate the ancient art of coffee preparation while creating a contemporary gathering space.</p>
-                    <p>Our premium beans journey directly from Ethiopian highland farms, guaranteeing exceptional quality while supporting sustainable agricultural traditions. Every cup embodies a legacy of heritage and skilled artistry.</p>
-                    <p>Jimmaa Coffee represents more than a destination for exceptional beverages - we're a community crossroads where connections form, creativity flows, and the true spirit of coffee culture comes alive.</p>
+                    <p>Jimmaa Coffee brings the authentic taste and culture of Ethiopian coffee to your neighborhood. Named after Jimma, the birthplace of coffee in Ethiopia, we honor the centuries-old tradition of coffee ceremony while providing a modern, welcoming space for our community.</p>
+                    <p>Our beans are sourced directly from Ethiopian farms, ensuring the highest quality and supporting sustainable farming practices. Each cup tells a story of rich heritage and meticulous craftsmanship.</p>
+                    <p>At Jimmaa Coffee, we're more than just a coffee shop - we're a community hub where people connect, work, and experience the true essence of coffee culture.</p>
                 </div>
                 <div class="about-image"></div>
             </div>
@@ -482,87 +399,87 @@
     <!-- Menu Section -->
     <section id="menu" class="menu">
         <div class="container">
-            <h2>OUR CRAFTED SELECTIONS</h2>
+            <h2>OUR MENU</h2>
             <div class="menu-items">
                 <div class="menu-category">
-                    <h3>Coffee & Espresso Creations</h3>
+                    <h3>Coffee & Espresso</h3>
                     <div class="menu-item">
                         <div class="item-header">
-                            <span class="item-name">Traditional Ethiopian Brew</span>
+                            <span class="item-name">Traditional Ethiopian Coffee</span>
                             <span class="item-price">$4.50</span>
                         </div>
-                        <p class="item-desc">Authentic coffee prepared in the traditional Ethiopian ceremony style</p>
+                        <p class="item-desc">Authentic coffee brewed in the traditional Ethiopian style</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-header">
-                            <span class="item-name">Jimmaa Heritage Blend</span>
+                            <span class="item-name">Jimmaa Special Blend</span>
                             <span class="item-price">$5.00</span>
                         </div>
-                        <p class="item-desc">Our signature creation with distinctive berry and chocolate notes</p>
+                        <p class="item-desc">Our signature blend with notes of berry and chocolate</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-header">
-                            <span class="item-name">Single-Origin Espresso</span>
+                            <span class="item-name">Espresso</span>
                             <span class="item-price">$3.50</span>
                         </div>
-                        <p class="item-desc">Bold and complex espresso from Ethiopian highlands</p>
+                        <p class="item-desc">Rich and bold single-origin espresso</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-header">
-                            <span class="item-name">Artisan Cappuccino</span>
+                            <span class="item-name">Cappuccino</span>
                             <span class="item-price">$4.75</span>
                         </div>
-                        <p class="item-desc">Expertly crafted with velvety microfoam</p>
+                        <p class="item-desc">Traditional cappuccino with perfect foam</p>
                     </div>
                 </div>
                 
                 <div class="menu-category">
-                    <h3>Teas & Specialty Drinks</h3>
+                    <h3>Teas & More</h3>
                     <div class="menu-item">
                         <div class="item-header">
                             <span class="item-name">Ethiopian Spiced Tea</span>
                             <span class="item-price">$4.25</span>
                         </div>
-                        <p class="item-desc">Traditional tea infused with authentic Ethiopian spices</p>
+                        <p class="item-desc">Traditional tea with authentic Ethiopian spices</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-header">
-                            <span class="item-name">Artisan Hot Chocolate</span>
+                            <span class="item-name">Hot Chocolate</span>
                             <span class="item-price">$4.50</span>
                         </div>
-                        <p class="item-desc">Rich, indulgent chocolate experience</p>
+                        <p class="item-desc">Rich, creamy hot chocolate</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-header">
-                            <span class="item-name">Ethiopian Cold Brew</span>
+                            <span class="item-name">Iced Coffee</span>
                             <span class="item-price">$4.75</span>
                         </div>
-                        <p class="item-desc">Smooth cold-brewed Ethiopian coffee served over ice</p>
+                        <p class="item-desc">Cold-brewed Ethiopian coffee over ice</p>
                     </div>
                 </div>
                 
                 <div class="menu-category">
-                    <h3>Artisan Baked Goods</h3>
+                    <h3>Pastries & Snacks</h3>
                     <div class="menu-item">
                         <div class="item-header">
-                            <span class="item-name">Injera Crisps</span>
+                            <span class="item-name">Injera Chips</span>
                             <span class="item-price">$5.50</span>
                         </div>
-                        <p class="item-desc">Crispy traditional bread with signature dipping sauces</p>
+                        <p class="item-desc">Crispy injera served with dipping sauces</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-header">
-                            <span class="item-name">Butter Croissant</span>
+                            <span class="item-name">Croissant</span>
                             <span class="item-price">$3.75</span>
                         </div>
-                        <p class="item-desc">Flaky, buttery pastry baked fresh daily</p>
+                        <p class="item-desc">Freshly baked butter croissant</p>
                     </div>
                     <div class="menu-item">
                         <div class="item-header">
-                            <span class="item-name">Featured Muffin</span>
+                            <span class="item-name">Muffin of the Day</span>
                             <span class="item-price">$3.50</span>
                         </div>
-                        <p class="item-desc">Ask about our daily muffin creation</p>
+                        <p class="item-desc">Ask about our daily muffin special</p>
                     </div>
                 </div>
             </div>
@@ -572,16 +489,16 @@
     <!-- Location Section -->
     <section id="location" class="location">
         <div class="container">
-            <h2>OUR SPACE</h2>
+            <h2>VISIT US</h2>
             <div class="location-content">
                 <div class="location-info">
-                    <h3>Welcome to Our Home</h3>
-                    <p>Step into the warm, inviting atmosphere of Jimmaa Coffee. Our environment reflects Ethiopian cultural elements while providing contemporary comfort for work, conversation, or quiet reflection with your perfect beverage.</p>
-                    <p>We offer comfortable seating arrangements, complimentary WiFi, and a tranquil setting ideal for meetings or personal relaxation.</p>
-                    <p><strong>Find Us At:</strong> Piney Creek Crossing Retail Center</p>
+                    <h3>Our Coffee Shop</h3>
+                    <p>Come experience the warm, inviting atmosphere of Jimmaa Coffee. Our space is designed to reflect Ethiopian culture while providing modern comfort for working, socializing, or simply enjoying a perfect cup of coffee.</p>
+                    <p>We feature comfortable seating, free WiFi, and a peaceful environment perfect for meetings or quiet relaxation.</p>
+                    <p><strong>Address:</strong> Piney Creek Crossing Retail Center</p>
                 </div>
                 <div class="location-hours">
-                    <h3>Operating Hours</h3>
+                    <h3>Hours of Operation</h3>
                     <table class="hours-table">
                         <tr>
                             <td>Monday - Friday</td>
@@ -604,16 +521,16 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>STAY CONNECTED</h2>
+            <h2>CONTACT US</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Reach Out to Us</h3>
-                    <p>Curious about our coffee origins, interested in hosting an event, or simply want to share your experience? We welcome your connection!</p>
-                    <p>We continuously strive to enhance our service and community presence. Your insights and suggestions are valued.</p>
-                    <p>Follow our social channels for updates on special events, new creations, and coffee tasting experiences.</p>
+                    <h3>Get In Touch</h3>
+                    <p>Have questions about our coffee, want to host an event, or just want to say hello? We'd love to hear from you!</p>
+                    <p>We're always looking for ways to improve and serve our community better. Your feedback and suggestions are welcome.</p>
+                    <p>Follow us on social media to stay updated on special events, new menu items, and coffee tasting sessions.</p>
                 </div>
                 <div class="contact-details">
-                    <h3>GET IN TOUCH</h3>
+                    <h3>CONTACT INFORMATION</h3>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <span>703-479-8732</span>
@@ -626,7 +543,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Piney Creek Crossing Retail Center</span>
                     </div>
-                    <p style="margin-top: 20px;">We eagerly anticipate serving you an exceptional coffee experience!</p>
+                    <p style="margin-top: 20px;">We look forward to serving you the perfect cup of coffee!</p>
                     <a href="mailto:cotete11899@gmail.com" class="btn" style="margin-top: 20px;">Send Us a Message</a>
                 </div>
             </div>
@@ -637,7 +554,7 @@
     <footer>
         <div class="container">
             <div class="logo">JIMMAA COFFEE</div>
-            <p>Celebrating the Birthplace of Coffee</p>
+            <p>Since Jimma - The Origin of Coffee</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -646,22 +563,5 @@
             <p>&copy; 2023 Jimmaa Coffee. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
-        
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
 </body>
 </html>
