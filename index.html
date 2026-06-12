@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jimmaa Coffee - Celebrating the Birthplace of Coffee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Jimmaa Coffee - Celebrating the Birthplace of Coffee | Aurora, CO</title>
+    <meta name="description" content="Jimmaa Coffee brings authentic Ethiopian coffee culture to Aurora, CO. Experience traditional brews, artisan espresso, and warm hospitality at 16768 E Iliff Avenue.">
     <style>
         /* Global Styles */
         * {
@@ -14,104 +15,160 @@
         }
         
         :root {
-            --primary: #8B4513; /* Coffee brown */
-            --secondary: #D2691E; /* Chocolate brown */
-            --accent: #CD853F; /* Peru brown */
-            --light: #F5F5DC; /* Beige */
-            --dark: #3E2723; /* Dark brown */
-            --text: #333333;
+            --primary: #8B4513;
+            --primary-dark: #5e2e0c;
+            --secondary: #D2691E;
+            --accent: #CD853F;
+            --light: #F5F5DC;
+            --dark: #3E2723;
+            --text-dark: #1F1A17;
+            --text-soft: #2c241f;
             --text-light: #FFFFFF;
+            --shadow-sm: 0 5px 15px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.1);
+            --card-bg: #FFFFFF;
         }
         
         body {
             background-color: var(--light);
-            color: var(--text);
+            color: var(--text-dark);
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
         
         section {
-            padding: 60px 0;
+            padding: 70px 0;
         }
         
         h1, h2, h3 {
             color: var(--dark);
             margin-bottom: 20px;
+            letter-spacing: -0.3px;
+            font-weight: 700;
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             text-align: center;
+            color: #FFF3E0;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
         }
         
         h2 {
-            font-size: 2rem;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 10px;
-            margin-bottom: 30px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+            display: inline-block;
+            color: var(--dark);
         }
         
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 700;
         }
         
         p {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            color: var(--text-soft);
+            font-weight: 450;
         }
         
         .btn {
             display: inline-block;
             background-color: var(--primary);
             color: var(--text-light);
-            padding: 12px 25px;
+            padding: 12px 28px;
             border: none;
-            border-radius: 4px;
+            border-radius: 40px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            font-weight: 600;
+            transition: all 0.3s ease;
             cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            letter-spacing: 0.5px;
         }
         
         .btn:hover {
             background-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+            color: white;
+        }
+        
+        /* Top Announcement Bar */
+        .top-bar {
+            background-color: var(--secondary);
+            color: #FFF8EE;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1001;
+        }
+        
+        .top-bar i {
+            margin-right: 8px;
+            color: #FFE0B5;
+        }
+        
+        .top-bar a {
+            color: #FFF8EE;
+            text-decoration: underline;
+            font-weight: 700;
+            margin-left: 8px;
+        }
+        
+        .top-bar a:hover {
+            color: #FFEFD6;
         }
         
         /* Header Styles */
         header {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
-            background-position: center;
+            background-position: center 30%;
             color: var(--text-light);
             text-align: center;
-            padding: 100px 0;
+            padding: 140px 0 130px;
         }
         
         .logo {
-            font-size: 3.5rem;
-            font-weight: bold;
+            font-size: 3.8rem;
+            font-weight: 800;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 3px 3px 12px rgba(0,0,0,0.7);
+            letter-spacing: 2px;
+            color: #FFF8EE;
         }
         
         .tagline {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
             font-style: italic;
+            font-weight: 400;
+            color: #FFEFD6;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
         }
         
-        /* Navigation - Fixed for Mobile */
+        /* Navigation */
         nav {
             background-color: var(--dark);
-            padding: 15px 0;
+            padding: 16px 0;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         
         .nav-container {
@@ -121,44 +178,50 @@
         }
         
         .nav-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--text-light);
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #FFEEDD;
+            letter-spacing: 1px;
         }
         
         .nav-links {
             display: flex;
             list-style: none;
+            gap: 10px;
         }
         
         .nav-links li {
-            margin-left: 30px;
+            margin-left: 20px;
         }
         
         .nav-links a {
-            color: var(--text-light);
+            color: #FFF2E6;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.3s;
+            padding: 8px 6px;
+            font-size: 1rem;
         }
         
         .nav-links a:hover {
             color: var(--accent);
         }
         
-        /* Mobile Menu Toggle */
         .menu-toggle {
             display: none;
             flex-direction: column;
             cursor: pointer;
+            background: transparent;
+            border: none;
         }
         
         .menu-toggle span {
             height: 3px;
-            width: 25px;
-            background: var(--text-light);
+            width: 26px;
+            background: #FFF2E6;
             margin: 3px 0;
             transition: 0.3s;
+            border-radius: 2px;
         }
         
         /* About Section */
@@ -170,23 +233,28 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 40px;
+            gap: 48px;
         }
         
         .about-text {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
+        }
+        
+        .about-text p {
+            color: #2c241f;
+            font-size: 1.05rem;
         }
         
         .about-image {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
             height: 400px;
             background: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
         }
         
         /* Menu Section */
@@ -196,21 +264,27 @@
         
         .menu-items {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 35px;
         }
         
         .menu-category {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background-color: var(--card-bg);
+            padding: 30px 28px;
+            border-radius: 28px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .menu-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
         
         .menu-item {
             margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px dashed var(--accent);
+            padding-bottom: 14px;
+            border-bottom: 1px dashed #e0c8a8;
         }
         
         .menu-item:last-child {
@@ -220,24 +294,32 @@
         .item-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
         
         .item-name {
-            font-weight: bold;
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: #2a1e17;
         }
         
         .item-price {
-            color: var(--primary);
-            font-weight: bold;
+            color: #a55117;
+            font-weight: 800;
+            background: #f9e5d3;
+            padding: 2px 8px;
+            border-radius: 30px;
+            font-size: 0.9rem;
         }
         
         .item-desc {
-            font-size: 0.9rem;
-            color: #666;
+            font-size: 0.88rem;
+            color: #4f3a2c;
+            line-height: 1.4;
+            font-weight: 500;
         }
         
-        /* Location Section */
+        /* Location Section with Map */
         .location {
             background-color: white;
         }
@@ -245,125 +327,199 @@
         .location-content {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 50px;
         }
         
         .location-info {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
+        }
+        
+        .location-info p, .location-info strong {
+            color: #2b241f;
         }
         
         .location-hours {
             flex: 1;
-            min-width: 300px;
-            background-color: var(--light);
-            padding: 30px;
-            border-radius: 8px;
+            min-width: 280px;
+            background-color: #FFF7EC;
+            padding: 32px 30px;
+            border-radius: 28px;
+            box-shadow: var(--shadow-sm);
         }
         
         .hours-table {
             width: 100%;
+            border-collapse: collapse;
         }
         
         .hours-table tr {
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #e2d5c0;
         }
         
         .hours-table td {
-            padding: 10px 0;
+            padding: 14px 0;
+            font-weight: 600;
+            color: #2e251f;
         }
         
         .hours-table td:last-child {
             text-align: right;
-            font-weight: bold;
+            font-weight: 700;
+            color: #b85c1a;
+        }
+        
+        .address-highlight {
+            background: #EEDFCB;
+            border-radius: 20px;
+            padding: 8px 18px;
+            display: inline-block;
+            font-weight: 800;
+            color: #3e2a1c;
+            font-size: 1rem;
+            margin-top: 6px;
+            letter-spacing: 0.3px;
+        }
+        
+        /* Map Container - Reduced Size */
+        .map-container {
+            margin-top: 45px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 2px solid #EEDFCB;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 280px;
+            display: block;
+            border: 0;
         }
         
         /* Contact Section */
         .contact {
-            background-color: var(--light);
+            background-color: #FEFAF0;
         }
         
         .contact-content {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 50px;
         }
         
         .contact-info {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
+        }
+        
+        .contact-info p, .contact-info h3 {
+            color: #2b221c;
         }
         
         .contact-details {
             flex: 1;
-            min-width: 300px;
-            background-color: var(--dark);
-            color: var(--text-light);
-            padding: 30px;
-            border-radius: 8px;
+            min-width: 280px;
+            background-color: #2B1E16;
+            color: #FFF2E6;
+            padding: 36px 32px;
+            border-radius: 28px;
+            box-shadow: var(--shadow-md);
         }
         
         .contact-details h3 {
-            color: var(--light);
+            color: #FFE0B5;
+            margin-top: 0;
+            font-weight: 700;
         }
         
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 22px;
+            gap: 14px;
+            flex-wrap: wrap;
         }
         
         .contact-item i {
-            margin-right: 10px;
-            color: var(--accent);
+            font-size: 1.5rem;
+            color: #E6B17E;
+            width: 34px;
         }
         
-        /* Footer */
+        .contact-item span {
+            color: #FEF1E2;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        
+        .contact-details p {
+            color: #FFEFDE;
+            font-weight: 450;
+        }
+        
+        /* Footer - No separator line above copyright */
         footer {
             background-color: var(--dark);
-            color: var(--text-light);
+            color: #F9EFE2;
             text-align: center;
-            padding: 30px 0;
+            padding: 45px 0 35px;
+        }
+        
+        footer p, footer .logo {
+            color: #FFEEDD;
         }
         
         .social-links {
-            margin: 20px 0;
+            margin: 25px 0;
         }
         
         .social-links a {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s;
+            color: #FFEAD4;
+            font-size: 1.6rem;
+            margin: 0 12px;
+            transition: color 0.3s, transform 0.2s;
+            display: inline-block;
         }
         
         .social-links a:hover {
             color: var(--accent);
+            transform: scale(1.08);
         }
         
-        /* Responsive Design - Fixed Mobile Menu */
+        /* Footer copyright - clean single line without any border/line above */
+        .footer-copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #e2cdb5;
+            /* No border-top, no line above */
+        }
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
             }
-            
             h2 {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
+                border-bottom-width: 2px;
             }
-            
             header {
-                padding: 60px 0;
+                padding: 100px 0 80px;
             }
-            
             .logo {
-                font-size: 2.5rem;
+                font-size: 2.6rem;
             }
-            
+            .tagline {
+                font-size: 1.2rem;
+            }
             section {
-                padding: 40px 0;
+                padding: 50px 0;
             }
             
-            /* Mobile Navigation */
             .menu-toggle {
                 display: flex;
             }
@@ -372,14 +528,18 @@
                 position: fixed;
                 top: 70px;
                 left: -100%;
-                width: 100%;
+                width: 80%;
+                max-width: 320px;
                 height: calc(100vh - 70px);
-                background-color: var(--dark);
+                background-color: #2D1F18;
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
                 padding-top: 50px;
-                transition: left 0.3s ease;
+                transition: left 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+                box-shadow: 5px 0 20px rgba(0,0,0,0.4);
+                border-radius: 0 24px 24px 0;
+                gap: 0;
             }
             
             .nav-links.active {
@@ -387,45 +547,89 @@
             }
             
             .nav-links li {
-                margin: 20px 0;
+                margin: 18px 0;
+                width: 100%;
+                text-align: center;
             }
             
             .nav-links a {
-                font-size: 1.2rem;
-                padding: 10px 20px;
+                font-size: 1.25rem;
+                padding: 12px 20px;
+                display: block;
+                width: 100%;
+                color: #FFEFE0;
+                font-weight: 600;
+            }
+            
+            .about-image {
+                height: 280px;
+            }
+            
+            .menu-category {
+                padding: 24px 20px;
+            }
+            
+            .map-container iframe {
+                height: 220px;
+            }
+            
+            .top-bar {
+                font-size: 0.8rem;
+                padding: 10px 16px;
             }
         }
         
         @media (max-width: 480px) {
-            .nav-logo {
-                font-size: 1.2rem;
+            .container {
+                padding: 0 18px;
             }
-            
+            .nav-logo {
+                font-size: 1.4rem;
+            }
             .logo {
                 font-size: 2rem;
             }
-            
-            .tagline {
-                font-size: 1.2rem;
+            .btn {
+                padding: 10px 20px;
             }
-            
+            .contact-details {
+                padding: 26px 20px;
+            }
+            .map-container iframe {
+                height: 180px;
+            }
             header {
-                padding: 40px 0;
+                padding: 80px 0 60px;
             }
+        }
+        
+        .btn:focus, .nav-links a:focus {
+            outline: 2px solid #FFB347;
+            outline-offset: 2px;
+        }
+        
+        .location-hours h3, .contact-info h3 {
+            color: #6b3c1a;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <i class="fas fa-mug-hot"></i> Now Open in Aurora! Visit us at 16768 E Iliff Avenue 
+        <i class="fas fa-arrow-right"></i> <a href="#location">Get Directions <i class="fas fa-map-marker-alt"></i></a>
+    </div>
+
     <!-- Navigation -->
     <nav>
         <div class="container nav-container">
             <div class="nav-logo">JIMMAA COFFEE</div>
-            <div class="menu-toggle" id="mobile-menu">
+            <button class="menu-toggle" id="mobile-menu" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about">Our Heritage</a></li>
                 <li><a href="#menu">Our Offerings</a></li>
@@ -550,7 +754,7 @@
         </div>
     </section>
 
-    <!-- Location Section -->
+    <!-- Location Section with Map -->
     <section id="location" class="location">
         <div class="container">
             <h2>OUR SPACE</h2>
@@ -559,7 +763,8 @@
                     <h3>Welcome to Our Home</h3>
                     <p>Step into the warm, inviting atmosphere of Jimmaa Coffee. Our environment reflects Ethiopian cultural elements while providing contemporary comfort for work, conversation, or quiet reflection with your perfect beverage.</p>
                     <p>We offer comfortable seating arrangements, complimentary WiFi, and a tranquil setting ideal for meetings or personal relaxation.</p>
-                    <p><strong>Find Us At:</strong> Piney Creek Crossing Retail Center</p>
+                    <p><strong>📍 Find Us At:</strong><br> 
+                    <span class="address-highlight">16768 E Iliff Avenue, Aurora, CO 80013</span></p>
                 </div>
                 <div class="location-hours">
                     <h3>Operating Hours</h3>
@@ -577,7 +782,17 @@
                             <td>7:00 AM - 8:00 PM</td>
                         </tr>
                     </table>
+                    <p style="margin-top: 24px; font-size: 0.95rem; font-weight: 500;"><i class="fas fa-coffee"></i> Come experience the birthplace of coffee, right in the heart of Aurora.</p>
                 </div>
+            </div>
+            <!-- Embedded Google Map -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.102817744761!2d-104.81078868461818!3d39.69558897944415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7e9b9b9b9b9b%3A0x9b9b9b9b9b9b9b9b!2s16768%20E%20Iliff%20Ave%2C%20Aurora%2C%20CO%2080013!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
@@ -592,11 +807,12 @@
                     <p>Curious about our coffee origins, interested in hosting an event, or simply want to share your experience? We welcome your connection!</p>
                     <p>We continuously strive to enhance our service and community presence. Your insights and suggestions are valued.</p>
                     <p>Follow our social channels for updates on special events, new creations, and coffee tasting experiences.</p>
+                    <p><strong>Visit our Aurora location:</strong><br> 16768 E Iliff Avenue, Aurora, CO 80013</p>
                 </div>
                 <div class="contact-details">
                     <h3>GET IN TOUCH</h3>
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-phone-alt"></i>
                         <span>703-479-8732</span>
                     </div>
                     <div class="contact-item">
@@ -604,43 +820,92 @@
                         <span>jimmacoffebi@gmail.com</span>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Piney Creek Crossing Retail Center</span>
+                        <i class="fas fa-location-dot"></i>
+                        <span>16768 E Iliff Avenue, Aurora, CO 80013</span>
                     </div>
-                    <p style="margin-top: 20px;">We eagerly anticipate serving you an exceptional coffee experience!</p>
-                    <a href="mailto:cotete11899@gmail.com" class="btn" style="margin-top: 20px;">Send Us a Message</a>
+                    <p style="margin-top: 20px; font-style: italic; font-weight: 500;">We eagerly anticipate serving you an exceptional coffee experience!</p>
+                    <a href="mailto:cotete11899@gmail.com" class="btn" style="margin-top: 20px; background-color: #b95f2a;">Send Us a Message</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer - No line above copyright -->
     <footer>
         <div class="container">
-            <div class="logo">JIMMAA COFFEE</div>
-            <p>Celebrating the Birthplace of Coffee</p>
+            <div class="logo" style="font-size: 2rem;">JIMMAA COFFEE</div>
+            <p>Celebrating the Birthplace of Coffee — Now in Aurora, CO</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
-            <p>&copy; 2023 Jimmaa Coffee. All rights reserved.</p>
+            <!-- Clean copyright line - no border/line above -->
+            <div class="footer-copyright">
+                © 2026 JIMMAA COFFEE. All rights reserved. | Developed By <strong>Tesfa Software Solutions</strong>
+            </div>
         </div>
     </footer>
 
     <script>
         // Mobile Menu Toggle
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navLinksMenu = document.getElementById('nav-links');
         
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        function toggleMenu() {
+            navLinksMenu.classList.toggle('active');
+            const spans = mobileMenuBtn.querySelectorAll('span');
+            if (navLinksMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        }
         
-        // Close mobile menu when clicking on a link
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        
+        // Close mobile menu when clicking on nav links
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+                if (navLinksMenu.classList.contains('active')) {
+                    navLinksMenu.classList.remove('active');
+                    const spans = mobileMenuBtn.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navLinksMenu.contains(event.target);
+            const isClickOnToggle = mobileMenuBtn.contains(event.target);
+            if (!isClickInsideNav && !isClickOnToggle && navLinksMenu.classList.contains('active')) {
+                navLinksMenu.classList.remove('active');
+                const spans = mobileMenuBtn.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+        
+        // Smooth scroll with offset for fixed header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === "#" || targetId === "") return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 10;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
             });
         });
     </script>
